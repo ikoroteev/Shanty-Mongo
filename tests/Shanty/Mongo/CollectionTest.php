@@ -285,6 +285,16 @@ class Shanty_Mongo_CollectionTest extends Shanty_Mongo_TestSetup
 		$this->assertEquals('Roger', $roger->name->first);
 		$this->assertNull($roger->sex);
 	}
+
+	public function testExplain()
+	{
+		$roger = My_ShantyMongo_User::all(array('name.first' => 'Roger'));
+		$explain = $roger->explain();
+		$this->assertArrayHasKey('cursor', $explain);
+		$this->assertArrayHasKey('nscanned', $explain);
+		$this->assertArrayHasKey('millis', $explain);
+		$this->assertArrayHasKey('scanAndOrder', $explain);
+	}
 	
 	public function testAll()
 	{

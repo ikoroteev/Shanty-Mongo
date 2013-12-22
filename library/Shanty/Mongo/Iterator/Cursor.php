@@ -155,4 +155,16 @@ class Shanty_Mongo_Iterator_Cursor implements OuterIterator
 		
 		return $res;
 	}
+
+	/**
+	 * @return array
+	 */
+	public function explain()
+	{
+		if (!is_null($this->_cursor)) {
+			return $this->_cursor->explain();
+		} else {
+			return array();
+		}
+	}
 }
