@@ -6,7 +6,7 @@ This Library has be retired until further notice. There are a number of critical
 Shanty Mongo
 ============
 
-[![Build Status](https://secure.travis-ci.org/coen-hyde/Shanty-Mongo.png?branch=master)](http://travis-ci.org/coen-hyde/Shanty-Mongo)
+[![Build Status](https://secure.travis-ci.org/ikoroteev/Shanty-Mongo.png?branch=master)](http://travis-ci.org/ikoroteev/Shanty-Mongo)
 
 Summary
 -------
