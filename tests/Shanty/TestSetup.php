@@ -134,7 +134,7 @@ class Shanty_TestSetup extends PHPUnit_Framework_TestCase
 		$this->_userCollection = $this->_connection->selectDb(TESTS_SHANTY_MONGO_DB)->selectCollection('user');
 
 		foreach ($this->_users as $user) {
-			$this->_userCollection->insert($user, array('safe' => true));
+			$this->_userCollection->insert($user, array('w' => true));
 		}
 
 		$this->_articles = array(
